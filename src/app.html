@@ -1,0 +1,14 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="styles.css"></require>
+  <require from="./components/nav-bar.html"></require>
+
+  <nav-bar router.bind="router"></nav-bar>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- TODO: Add API isRequesting to loading indicator-->
+      <loading-indicator loading.bind="router.isNavigating"></loading-indicator>
+      <router-view class="col-md-8 col-md-offset-2"></router-view>
+    </div>
+  </div>
+</template>

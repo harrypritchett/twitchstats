@@ -1,0 +1,15 @@
+.thumbnail .caption > h4,
+.thumbnail .caption > h5,
+.thumbnail .caption > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.thumbnail .caption .label {
+  margin-right: 5px;
+}
+
+.nav.navbar-nav .label {
+  margin-top: 15px;
+}

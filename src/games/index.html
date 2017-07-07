@@ -1,0 +1,21 @@
+<template>
+  <h3>Top Games</h3>
+  <div class="alert alert-warning" role="alert">Twitch API returning bad game logo links.</div>
+  <div class="alert alert-info" role="alert">
+    Total Unique games: ${games._total}
+  </div>
+  <div class="row">
+    <div repeat.for="game of games.top" class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <!-- TODO: Replace logo's with boxart instead of logoart-->
+        <img src.bind="game.game.logo.large" alt.bind="game.game.name">
+        <div class="caption">
+          <h4>${game.game.name}</h4>
+          <p class="text-right"><span class="label label-warning">${game.channels}</span> channels</p>
+          <p class="text-right"><span class="label label-success">${game.viewers}</span>  viewers</p>
+          <p><a href="#" class="btn btn-primary" role="button">See more</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
