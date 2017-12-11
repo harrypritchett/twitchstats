@@ -12,6 +12,7 @@ export class App {
   configureRouter(config: RouterConfiguration, router: Router): void {
     this.router = router;
     config.title = 'TwitchStats';
+    config.options.pushState = true;
     config.map([
       {
         route: ['', 'home'],
